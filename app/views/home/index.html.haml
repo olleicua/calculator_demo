@@ -1,0 +1,6 @@
+= form_tag root_path, method: :post do
+  = text_field_tag :input, nil, autofocus: true
+  = submit_tag "Calculate"
+
+- if @result.present?
+  %p= @result

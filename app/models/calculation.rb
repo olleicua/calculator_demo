@@ -35,7 +35,7 @@ class Calculation
     elsif /^-?\d+\.\d+$/ =~ @input
       @input.to_f
     else
-      "Invalid input (#{@input})"
+      "Invalid input"
     end
   end
 end

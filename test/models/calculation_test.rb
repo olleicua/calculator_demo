@@ -12,4 +12,8 @@ class CalculationTest < ActionMailer::TestCase
   test 'floating point arithmetic with whitespace' do
     assert_in_epsilon 5.2727, Calculation.new(' 27 - 3 * 8 + 25 / 11 ').result, 0.001
   end
+
+  test 'invalid input' do
+    assert_equal 'Invalid input', Calculation.new('foobar').result
+  end
 end
